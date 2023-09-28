@@ -176,6 +176,29 @@
             "id": "card",
             "fields": [
               {
+                "component": "reference",
+                "valueType": "string",
+                "name": "image",
+                "label": "Image",
+                "multi": true,
+                "raw": {
+                  "listOrder": 8,
+                  "valueType": "string",
+                  "name": "image",
+                  "metaType": "reference",
+                  "fieldLabel": "Image",
+                  "multifield": false,
+                  "showThumbnail": true,
+                  "rootPath": "/content/dam",
+                  "acceptedTypes": [
+                    "image"
+                  ]
+                },
+                "validation": {
+                  "maxSize": 1
+                }
+              },
+              {
                 "component": "text-area",
                 "name": "text",
                 "value": "",
