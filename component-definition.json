@@ -1,0 +1,191 @@
+{
+  "groups": [
+    {
+      "title": "Default Content",
+      "id": "default",
+      "components": [
+        {
+          "title": "Title",
+          "id": "title",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "core/franklin/components/title/v1/title",
+                "template": {}
+              }
+            }
+          },
+          "model": {
+            "uri": "",
+            "id": "title",
+            "fields": [
+              {
+                "component": "select",
+                "name": "type",
+                "value": "h1",
+                "label": "Type",
+                "valueType": "string",
+                "options": [
+                  {
+                    "name": "h1",
+                    "value": "h1"
+                  },
+                  {
+                    "name": "h2",
+                    "value": "h2"
+                  },
+                  {
+                    "name": "h3",
+                    "value": "h3"
+                  },
+                  {
+                    "name": "h4",
+                    "value": "h4"
+                  },
+                  {
+                    "name": "h5",
+                    "value": "h5"
+                  },
+                  {
+                    "name": "h6",
+                    "value": "h6"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "title": "Image",
+          "id": "image",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "core/franklin/components/image/v1/image",
+                "template": {}
+              }
+            }
+          },
+          "model": {
+            "id": "image",
+            "uri": "",
+            "fields": [
+              {
+                "component": "text-input",
+                "valueType": "string",
+                "name": "alt",
+                "value": "Default alt",
+                "label": "Alt Text"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Button",
+          "id": "button",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "core/franklin/components/button/v1/button",
+                "template": {}
+              }
+            }
+          },
+          "model": {
+            "id": "button",
+            "uri": "",
+            "fields": [
+              {
+                "component": "text-input",
+                "valueType": "string",
+                "name": "href",
+                "value": "",
+                "label": "Link"
+              },
+              {
+                "component": "text-input",
+                "valueType": "string",
+                "name": "text",
+                "value": "",
+                "label": "Text"
+              },
+              {
+                "component": "select",
+                "name": "type",
+                "value": "",
+                "label": "Type",
+                "valueType": "string",
+                "options": [
+                  {
+                    "name": "default",
+                    "value": ""
+                  },
+                  {
+                    "name": "primary",
+                    "value": "primary"
+                  },
+                  {
+                    "name": "secondary",
+                    "value": "secondary"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Blocks",
+      "id": "blocks",
+      "components": [
+        {
+          "title": "Cards",
+          "id": "cards",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "allowedComponents": "card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Cards",
+          "id": "cards",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "card",
+                  "model": "card",
+                  "propertyNames": [
+                    "image",
+                    "text"
+                  ]
+                }
+              }
+            }
+          },
+          "model": {
+            "uri": "",
+            "id": "card",
+            "fields": [
+              {
+                "component": "text-area",
+                "name": "text",
+                "value": "",
+                "label": "Text",
+                "valueType": "string"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
