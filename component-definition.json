@@ -5,6 +5,18 @@
       "id": "default",
       "components": [
         {
+          "title": "Text",
+          "id": "text",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "core/franklin/components/text/v1/text",
+                "template": {}
+              }
+            }
+          }
+        },
+        {
           "title": "Title",
           "id": "title",
           "plugins": {
