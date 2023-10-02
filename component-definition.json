@@ -166,8 +166,8 @@
           }
         },
         {
-          "title": "Cards",
-          "id": "cards",
+          "title": "Card",
+          "id": "card",
           "plugins": {
             "aem": {
               "page": {
