@@ -152,6 +152,41 @@
       "id": "blocks",
       "components": [
         {
+          "title": "Columns",
+          "id": "columns",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "core/franklin/components/columns/v1/columns",
+                "template": {
+                  "columns": "2",
+                  "rows": "1"
+                }
+              }
+            }
+          },
+          "model": {
+            "id": "columns",
+            "uri": "",
+            "fields": [
+              {
+                "component": "text-input",
+                "valueType": "number",
+                "name": "columns",
+                "value": "",
+                "label": "Columns"
+              },
+              {
+                "component": "text-input",
+                "valueType": "number",
+                "name": "rows",
+                "value": "",
+                "label": "Rows"
+              }
+            ]
+          }
+        },
+        {
           "title": "Cards",
           "id": "cards",
           "plugins": {
