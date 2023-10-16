@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://oddly-adequate-macaque.ngrok-free.app/content/franklin-examples"
+    url: "https://oddly-adequate-macaque.ngrok-free.app/bin/franklin.delivery/buuhuu/xwalk-example/main"
     type: "markup"
     suffix: ".html?wcmmode=disabled"
