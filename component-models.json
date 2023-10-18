@@ -152,7 +152,7 @@
     "id": "section",
     "fields": [
       {
-        "component": "text-area",
+        "component": "text-input",
         "name": "style",
         "value": "",
         "label": "Style",
