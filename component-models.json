@@ -41,6 +41,13 @@
     "id": "image",
     "fields": [
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference",
+        "label": "Image",
+        "multi": false
+      },
+      {
         "component": "text-input",
         "valueType": "string",
         "name": "alt",
