@@ -86,6 +86,21 @@
           }
         },
         {
+          "title": "Hero",
+          "id": "hero",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "core/franklin/components/columns/v1/columns",
+                "template": {
+                  "name": "Hero",
+                  "model": "hero"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Cards",
           "id": "cards",
           "plugins": {
