@@ -147,5 +147,18 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      {
+        "component": "text-area",
+        "name": "style",
+        "value": "",
+        "label": "Style",
+        "valueType": "string"
+      }
+    ]
   }
+
 ]
