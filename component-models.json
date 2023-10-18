@@ -3,6 +3,13 @@
     "id": "title",
     "fields": [
       {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "jcr:title",
+        "value": "",
+        "label": "Text"
+      },
+      {
         "component": "select",
         "name": "type",
         "value": "h1",
@@ -34,6 +41,13 @@
             "value": "h6"
           }
         ]
+      },
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "href",
+        "value": "",
+        "label": "Link"
       }
     ]
   },
