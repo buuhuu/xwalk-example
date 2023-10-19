@@ -1,4 +1,5 @@
 mappings:
+ - /content/dam/franklin-examples/:/media/
  - /content/franklin-examples/:/
 
 includes:
