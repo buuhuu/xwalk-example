@@ -1,6 +1,6 @@
 mappings:
- - /content/dam/franklin-examples/:/media/
  - /content/franklin-examples/:/
+ - /content/dam/franklin-examples/:/media/
 
 includes:
  - /content/franklin-examples/
