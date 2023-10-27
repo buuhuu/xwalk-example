@@ -130,6 +130,29 @@
     ]
   },
   {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "select",
+        "name": "cq:options",
+        "value": "",
+        "label": "Options",
+        "emptyOption": true,
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Alpha",
+            "value": "alpha"
+          },
+          {
+            "name": "Bravo",
+            "value": "bravo"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
