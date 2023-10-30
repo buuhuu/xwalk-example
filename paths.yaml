@@ -1,7 +1,5 @@
 mappings:
  - /content/franklin-examples/:/
- - /content/dam/:/dam/
 
 includes:
  - /content/franklin-examples/
- - /content/dam/
