@@ -249,3 +249,7 @@ main .section {
 main .section.highlight {
   background-color: var(--highlight-background-color);
 }
+
+main .section.highlight.invert {
+  filter: invert(1);
+}

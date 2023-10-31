@@ -161,6 +161,10 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Invert",
+            "value": "invert"
           }
         ]
       }
