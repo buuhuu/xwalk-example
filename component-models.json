@@ -155,7 +155,7 @@
         "component": "select",
         "name": "style",
         "multi": true,
-        "label": "Type",
+        "label": "Style",
         "valueType": "string",
         "options": [
           {
