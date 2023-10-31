@@ -152,11 +152,17 @@
     "id": "section",
     "fields": [
       {
-        "component": "text-input",
+        "component": "select",
         "name": "style",
-        "value": "",
-        "label": "Style",
-        "valueType": "string"
+        "multi": true,
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "highlight",
+            "value": "Highlight"
+          }
+        ]
       }
     ]
   },
