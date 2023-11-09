@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
   // Create a new meta element
   const metaElement = document.createElement('meta');
 
@@ -8,4 +8,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Append the meta element to the head of the document
   document.head.appendChild(metaElement);
-});
+})();
