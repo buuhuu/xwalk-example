@@ -3,19 +3,17 @@ import {
 } from './lib-franklin.js';
 
 function handleEditorUpdate(event) {
-  const { detail: { itemids } } = event;
+  const { detail: { itemids, payload } } = event;
   Promise.all(itemids
-    .map((itemId) => document.querySelector(`[itemid="${itemId}"]`))
-    .map(async (element) => {
+    .map(async (itemId, i) => {
+      const element = document.querySelector(`[itemid="${itemId}"]`)
       const block = element.closest('.block');
       const blockItemId = block?.getAttribute('itemid');
       if (block && blockItemId?.startsWith('urn:aemconnection:')) {
-        const path = blockItemId.substring(18);
-        const resp = await fetch(`${path}.html`);
-        if (resp.ok) {
-          const text = await resp.text();
-          const newBlock = new DOMParser().parseFromString(text, 'text/html').body.firstElementChild;
-          // hide the new block, and insert it after the existing one
+        const htmlContent = payload[i]?.content?.html;
+        const main = new DOMParser().parseFromString(htmlContent, 'text/html')
+        const newBlock = main.querySelector(`[itemid="${blockItemId}"]`)
+        if(newBlock) {
           newBlock.style.display = 'none';
           block.insertAdjacentElement('afterend', newBlock);
           // decorate buttons and icons
