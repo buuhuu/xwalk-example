@@ -3,16 +3,18 @@ import {
 } from './lib-franklin.js';
 
 function handleEditorUpdate(event) {
-  const { detail: { itemids, payload } } = event;
-  Promise.all(itemids
-    .map(async (itemId, i) => {
-      const element = document.querySelector(`[itemid="${itemId}"]`)
+  const { detail: { payload } } = event;
+  const updates = payload?.updates;
+  Promise.all(updates
+    .map(async (update) => {
+      const { itemid, content } = update;
+      const element = document.querySelector(`[itemid="${itemid}"]`);
       const block = element.closest('.block');
       const blockItemId = block?.getAttribute('itemid');
       if (block && blockItemId?.startsWith('urn:aemconnection:')) {
-        const htmlContent = payload[i]?.content?.html;
-        const main = new DOMParser().parseFromString(htmlContent, 'text/html')
-        const newBlock = main.querySelector(`[itemid="${blockItemId}"]`)
+        const htmlContent = content?.html;
+        const main = new DOMParser().parseFromString(htmlContent, 'text/html');
+        const newBlock = main?.querySelector(`[itemid="${blockItemId}"]`);
         if(newBlock) {
           newBlock.style.display = 'none';
           block.insertAdjacentElement('afterend', newBlock);
