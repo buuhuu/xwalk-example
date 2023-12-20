@@ -81,6 +81,13 @@
         "label": "Text"
       },
       {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
+        "label": "Title"
+      },
+      {
         "component": "select",
         "name": "type",
         "value": "",
