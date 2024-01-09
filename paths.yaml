@@ -1,5 +1,6 @@
 mappings:
  - /content/franklin-examples/:/
+ - /content/franklin-examples/placeholders:/placeholders.json
 
 includes:
  - /content/franklin-examples/
