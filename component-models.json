@@ -1,5 +1,21 @@
 [
   {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "theme",
+        "label": "Theme"
+      },
+      {
+        "component": "text-area",
+        "name": "abstract",
+        "label": "Absrtact",
+        "description": "Enter an abstract for site search"
+      }
+    ]
+  },
+  {
     "id": "title",
     "fields": [
       {
