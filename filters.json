@@ -1,9 +1,5 @@
 [
   {
-    "id": "empty",
-    "components": []
-  },
-  {
     "id": "main",
     "components": [
       "section"
@@ -11,6 +7,10 @@
   },
   {
     "id": "columns",
+    "components": []
+  },
+  {
+    "id": "column",
     "components": [
       "text",
       "image",
