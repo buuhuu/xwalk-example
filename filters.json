@@ -1,5 +1,9 @@
 [
   {
+    "id": "empty",
+    "components": []
+  },
+  {
     "id": "main",
     "components": [
       "section"
