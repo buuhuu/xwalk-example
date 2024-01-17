@@ -3,19 +3,17 @@ import {
 } from './lib-franklin.js';
 
 function handleEditorUpdate(event) {
-  const { detail: { payload } } = event;
-  const updates = payload?.updates;
+  const { detail: { responseData } } = event;
+  const updates = responseData?.updates;
   Promise.all(updates
     .map(async (update) => {
-      const { itemid, content } = update;
-      const element = document.querySelector(`[itemid="${itemid}"]`);
-      const block = element.closest('.block');
-      const blockItemId = block?.getAttribute('itemid');
+      const { resource, content } = update;
+      const block = document.querySelector(`[data-aue-resource="${resource}"]`);
+      const blockItemId = block?.getAttribute('data-aue-resource');
       if (block && blockItemId?.startsWith('urn:aemconnection:')) {
-        const htmlContent = content?.html;
-        const main = new DOMParser().parseFromString(htmlContent, 'text/html');
-        const newBlock = main?.querySelector(`[itemid="${blockItemId}"]`);
-        if(newBlock) {
+        const newBlock = new DOMParser().parseFromString(content, 'text/html');
+        const newBlockItemId = block?.getAttribute('data-aue-resource');
+        if(newBlock && newBlockItemId === blockItemId) {
           newBlock.style.display = 'none';
           block.insertAdjacentElement('afterend', newBlock);
           // decorate buttons and icons
@@ -38,4 +36,4 @@ function handleEditorUpdate(event) {
     });
 }
 
-document.addEventListener('editor-update', handleEditorUpdate);
+document.addEventListener('aue:content-patch', handleEditorUpdate);
