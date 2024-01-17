@@ -26,7 +26,7 @@ function handleEditorUpdate(event) {
           await loadBlock(newBlock);
           // remove the old block and show the new one
           block.remove();
-          newBlock.style.display = 'unset';
+          newBlock.style.display = null;
           return Promise.resolve();
         }
       }

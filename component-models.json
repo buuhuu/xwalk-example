@@ -1,5 +1,21 @@
 [
   {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "theme",
+        "label": "Theme"
+      },
+      {
+        "component": "text-area",
+        "name": "abstract",
+        "label": "Absrtact",
+        "description": "Enter an abstract for site search"
+      }
+    ]
+  },
+  {
     "id": "title",
     "fields": [
       {
@@ -41,13 +57,6 @@
             "value": "h6"
           }
         ]
-      },
-      {
-        "component": "text-input",
-        "valueType": "string",
-        "name": "href",
-        "value": "",
-        "label": "Link"
       }
     ]
   },
@@ -86,6 +95,13 @@
         "name": "text",
         "value": "",
         "label": "Text"
+      },
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
+        "label": "Title"
       },
       {
         "component": "select",
