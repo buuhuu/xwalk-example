@@ -11,9 +11,9 @@ function handleEditorUpdate(event) {
       const block = document.querySelector(`[data-aue-resource="${resource}"]`);
       const blockItemId = block?.getAttribute('data-aue-resource');
       if (block && blockItemId?.startsWith('urn:aemconnection:')) {
-        const newBlock = new DOMParser().parseFromString(content, 'text/html');
-        const newBlockItemId = block?.getAttribute('data-aue-resource');
-        if(newBlock && newBlockItemId === blockItemId) {
+        const newBlockDocument = new DOMParser().parseFromString(content, 'text/html');
+        const newBlock = newBlockDocument?.querySelector(`[data-aue-resource="${blockItemId}"]`);
+        if(newBlock) {
           newBlock.style.display = 'none';
           block.insertAdjacentElement('afterend', newBlock);
           // decorate buttons and icons
