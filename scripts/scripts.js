@@ -15,6 +15,18 @@ import {
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 
 /**
+ * @returns the site root when served from AEM
+ */
+export function getSiteRoot() {
+  // This can be considered a workaround to load fragments without having a proper mapping in
+  // place. It is implemented for demo purposes in order to support creating multiple sites
+  // using this repository as a showcase, where the site root is unknown.
+  // Projects must sepcify the correct mappings in the paths.yaml.
+  const [siteRoot] = window.hlx.codeBasePath.split('.resource');
+  return siteRoot;
+}
+
+/**
  * load fonts.css and set a session storage flag
  */
 async function loadFonts() {
