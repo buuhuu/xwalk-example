@@ -1,4 +1,6 @@
-import { decorateBlock, decorateButtons, decorateIcons, loadBlock } from './lib-franklin.js';
+import {
+  decorateBlock, decorateButtons, decorateIcons, loadBlock,
+} from './lib-franklin.js';
 
 const connectionPrefix = 'urn:aemconnection:';
 
@@ -19,7 +21,7 @@ function handleEditorUpdate(event) {
       const { content } = update;
       const newBlockDocument = new DOMParser().parseFromString(content, 'text/html');
       const newBlock = newBlockDocument?.querySelector(`[data-aue-resource="${blockResource}"]`);
-      if(newBlock) {
+      if (newBlock) {
         newBlock.style.display = 'none';
         block.insertAdjacentElement('afterend', newBlock);
         // decorate buttons and icons
