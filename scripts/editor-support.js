@@ -5,7 +5,6 @@ import {
 const connectionPrefix = 'urn:aemconnection:';
 
 function handleEditorUpdate(event) {
-  event.stopPropagation();
   const { detail } = event;
 
   const resource = detail?.requestData?.target?.resource;
