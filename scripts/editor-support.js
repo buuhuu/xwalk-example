@@ -5,6 +5,7 @@ import {
 const connectionPrefix = 'urn:aemconnection:';
 
 function handleEditorUpdate(event) {
+  event.stopPropagation();
   const { detail } = event;
 
   const resource = detail?.requestData?.target?.resource;
@@ -43,4 +44,4 @@ function handleEditorUpdate(event) {
     });
 }
 
-document.addEventListener('aue:content-patch', handleEditorUpdate);
+document.querySelector('main').addEventListener('aue:content-patch', handleEditorUpdate);
