@@ -2,40 +2,38 @@ import {
   decorateBlock, decorateButtons, decorateIcons, loadBlock,
 } from './lib-franklin.js';
 
+const connectionPrefix = 'urn:aemconnection:';
+
 function handleEditorUpdate(event) {
-  const { detail: { itemids } } = event;
-  Promise.all(itemids
-    .map((itemId) => document.querySelector(`[itemid="${itemId}"]`))
-    .map(async (element) => {
-      const block = element.closest('.block');
-      const blockItemId = block?.getAttribute('itemid');
-      if (block && blockItemId?.startsWith('urn:aemconnection:')) {
-        const path = blockItemId.substring(18);
-        const resp = await fetch(`${path}.html`);
-        if (resp.ok) {
-          const text = await resp.text();
-          const newBlock = new DOMParser().parseFromString(text, 'text/html').body.firstElementChild;
-          // hide the new block, and insert it after the existing one
-          newBlock.style.display = 'none';
-          block.insertAdjacentElement('afterend', newBlock);
-          // decorate buttons and icons
-          decorateButtons(newBlock);
-          decorateIcons(newBlock);
-          // decorate and load the block
-          decorateBlock(newBlock);
-          await loadBlock(newBlock);
-          // remove the old block and show the new one
-          block.remove();
-          newBlock.style.display = null;
-          return Promise.resolve();
-        }
-      }
-      return Promise.reject();
-    }))
-    .catch(() => {
-      // fallback to a full reload if any item could not be reloaded
-      window.location.reload();
-    });
+  const { detail } = event;
+
+  const resource = detail?.requestData?.target?.resource;
+  if (!resource) return;
+
+  const element = document.querySelector(`[data-aue-resource="${resource}"]`);
+  const block = element?.closest('.block');
+  const blockResource = block?.getAttribute('data-aue-resource');
+  if (!block || !blockResource?.startsWith(connectionPrefix)) return;
+
+  const updates = detail?.responseData?.updates;
+  if (updates.length > 0) {
+    const { content } = updates[0];
+    const newBlockDocument = new DOMParser().parseFromString(content, 'text/html');
+    const newBlock = newBlockDocument?.querySelector(`[data-aue-resource="${blockResource}"]`);
+    if (newBlock) {
+      newBlock.style.display = 'none';
+      block.insertAdjacentElement('afterend', newBlock);
+      // decorate buttons and icons
+      decorateButtons(newBlock);
+      decorateIcons(newBlock);
+      // decorate and load the block
+      decorateBlock(newBlock);
+      loadBlock(newBlock);
+      // remove the old block and show the new one
+      block.remove();
+      newBlock.style.display = null;
+    }
+  }
 }
 
-document.addEventListener('editor-update', handleEditorUpdate);
+document.querySelector('main')?.addEventListener('aue:content-patch', handleEditorUpdate);
