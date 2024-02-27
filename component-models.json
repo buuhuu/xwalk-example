@@ -3,12 +3,12 @@
     "id": "page-metadata",
     "fields": [
       {
-        "component": "text-input",
+        "component": "text",
         "name": "theme",
         "label": "Theme"
       },
       {
-        "component": "text-area",
+        "component": "richtext",
         "name": "abstract",
         "label": "Absrtact",
         "description": "Enter an abstract for site search"
@@ -19,7 +19,7 @@
     "id": "title",
     "fields": [
       {
-        "component": "text-input",
+        "component": "text",
         "valueType": "string",
         "name": "jcr:title",
         "value": "",
@@ -71,7 +71,7 @@
         "multi": false
       },
       {
-        "component": "text-input",
+        "component": "text",
         "valueType": "string",
         "name": "alt",
         "value": "Default alt",
@@ -83,21 +83,21 @@
     "id": "button",
     "fields": [
       {
-        "component": "text-input",
+        "component": "text",
         "valueType": "string",
         "name": "href",
         "value": "",
         "label": "Link"
       },
       {
-        "component": "text-input",
+        "component": "text",
         "valueType": "string",
         "name": "text",
         "value": "",
         "label": "Text"
       },
       {
-        "component": "text-input",
+        "component": "text",
         "valueType": "string",
         "name": "title",
         "value": "",
@@ -130,14 +130,14 @@
     "id": "columns",
     "fields": [
       {
-        "component": "text-input",
+        "component": "text",
         "valueType": "number",
         "name": "columns",
         "value": "",
         "label": "Columns"
       },
       {
-        "component": "text-input",
+        "component": "text",
         "valueType": "number",
         "name": "rows",
         "value": "",
@@ -156,7 +156,7 @@
         "multi": false
       },
       {
-        "component": "text-area",
+        "component": "richtext",
         "name": "text",
         "value": "",
         "label": "Text",
@@ -168,7 +168,7 @@
     "id": "section",
     "fields": [
       {
-        "component": "text-input",
+        "component": "text",
         "name": "style",
         "value": "",
         "label": "Style",
@@ -187,14 +187,14 @@
         "multi": false
       },
       {
-        "component": "text-input",
+        "component": "text",
         "valueType": "string",
         "name": "imageAlt",
         "label": "Alt",
         "value": ""
       },
       {
-        "component": "text-area",
+        "component": "richtext",
         "name": "text",
         "value": "",
         "label": "Text",
