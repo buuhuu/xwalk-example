@@ -2,6 +2,7 @@
   "mappings": [
     "/:/",
     "/content/franklin-examples/configuration:/.helix/config.json",
-    "/content/franklin-examples/headers:/.helix/headers.json"
+    "/content/franklin-examples/headers:/.helix/headers.json",
+    "/content/cq:tags/properties:/tags.json"
   ]
 }
