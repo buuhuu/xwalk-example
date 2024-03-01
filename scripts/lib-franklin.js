@@ -672,9 +672,9 @@ export function setup() {
   const scriptEl = document.querySelector('script[src$="/scripts/scripts.js"]');
   if (scriptEl) {
     try {
-      const scriptURL = new URL(scriptEl.src);
+      const scriptURL = new URL(scriptEl.src, window.location);
       if (scriptURL.host === window.location.host) {
-        [window.hlx.codeBasePath] = scriptURL.pathname.split('/scripts/scripts.js', window.location);
+        [window.hlx.codeBasePath] = scriptURL.pathname.split('/scripts/scripts.js');
       } else {
         [window.hlx.codeBasePath] = scriptURL.href.split('/scripts/scripts.js');
       }
