@@ -676,6 +676,7 @@ export function setup() {
       if (scriptURL.host === window.location.host) {
         [window.hlx.codeBasePath] = scriptURL.pathname.split('/scripts/scripts.js');
       } else {
+        // use the full URL for cross-origin scripts
         [window.hlx.codeBasePath] = scriptURL.href.split('/scripts/scripts.js');
       }
     } catch (error) {
