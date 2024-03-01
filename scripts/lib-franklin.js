@@ -674,7 +674,7 @@ export function setup() {
     try {
       const scriptURL = new URL(scriptEl.src);
       if (scriptURL.host === window.location.host) {
-        [window.hlx.codeBasePath] = scriptURL.pathname.split('/scripts/scripts.js');
+        [window.hlx.codeBasePath] = scriptURL.pathname.split('/scripts/scripts.js', window.location);
       } else {
         [window.hlx.codeBasePath] = scriptURL.href.split('/scripts/scripts.js');
       }
