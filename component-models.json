@@ -83,7 +83,7 @@
     "id": "button",
     "fields": [
       {
-        "component": "text",
+        "component": "aem-content",
         "valueType": "string",
         "name": "href",
         "value": "",
