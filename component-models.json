@@ -168,6 +168,12 @@
         "label": "Product",
         "valueType": "string"
       }
+      {
+        "component": "custom-asset",
+        "name": "custom-asset",
+        "label": "Third party Asset",
+        "valueType": "string"
+      }
     ]
   },
   {
