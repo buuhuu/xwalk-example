@@ -167,7 +167,7 @@
         "name": "product",
         "label": "Product",
         "valueType": "string"
-      }
+      },
       {
         "component": "custom-asset",
         "name": "custom-asset",
