@@ -166,6 +166,7 @@
         "component": "product",
         "name": "product",
         "label": "Product",
+        "cif-config": "/config.json",
         "valueType": "string"
       },
       {
