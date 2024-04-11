@@ -35,5 +35,26 @@
     "components": [
       "card"
     ]
+  },
+  {
+    "id": "menu-flyout",
+    "components": [
+      "menu-teaser",
+      "link-list"
+    ]
+  },
+  {
+    "id": "link-list",
+    "rte": {
+      "format": [],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": [],
+      "list": ["bullist"],
+      "insert": ["link"],
+      "advanced": [],
+      "extensions": [],
+      "editor": []
+    }
   }
 ]
