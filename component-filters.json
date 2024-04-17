@@ -15,7 +15,8 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "video"
     ]
   },
   {
@@ -25,6 +26,7 @@
       "image",
       "button",
       "title",
+      "video",
       "hero",
       "cards",
       "columns"

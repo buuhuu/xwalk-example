@@ -51,6 +51,20 @@
               }
             }
           }
+        },
+        {
+          "title": "Video",
+          "id": "video",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/button/v1/button",
+                "template": {
+                  "model": "video"
+                }
+              }
+            }
+          }
         }
       ]
     },

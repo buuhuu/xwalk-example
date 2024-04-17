@@ -127,6 +127,54 @@
     ]
   },
   {
+    "id": "video",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "href",
+        "value": "",
+        "label": "Video"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "value": "",
+        "label": "Video Alt"
+      },
+      {
+        "component": "multiselect",
+        "name": "title",
+        "value": "",
+        "label": "Video Options",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Muted",
+            "value": "muted"
+          },
+          {
+              "name": "Loop",
+              "value": "loop"
+          },
+          {
+              "name": "Inline",
+              "value": "playsinline"
+          },
+          {
+              "name": "Autoplay",
+              "value": "autoplay"
+          },
+          {
+              "name": "Controls",
+              "value": "controls"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
