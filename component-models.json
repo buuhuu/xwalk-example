@@ -8,6 +8,11 @@
         "label": "Theme"
       },
       {
+        "component": "aem-content",
+        "name": "author",
+        "label": "Author"
+      },
+      {
         "component": "richtext",
         "name": "abstract",
         "label": "Absrtact",
