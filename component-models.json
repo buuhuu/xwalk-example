@@ -9,7 +9,8 @@
           {
             "component": "text",
             "name": "theme",
-            "label": "Theme"
+            "label": "Theme",
+            "required": true
           },
           {
             "component": "aem-content",
@@ -30,7 +31,8 @@
           {
             "component": "date-time",
             "name": "datetime",
-            "label": "Date Time"
+            "label": "Date Time",
+            "required": true
           },
           {
             "component": "date-time",
