@@ -24,7 +24,7 @@
         "label": "Number"
       },
       {
-        "component": "data-time",
+        "component": "date-time",
         "name": "datetime",
         "label": "Date Time"
       },
