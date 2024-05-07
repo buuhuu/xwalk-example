@@ -81,6 +81,11 @@
         "name": "alt",
         "value": "Default alt",
         "label": "Alt Text"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Caption"
       }
     ]
   },
