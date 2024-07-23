@@ -197,6 +197,17 @@
     "id": "hero",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Options",
+        "options": [
+          {
+            "name": "Outline",
+            "value": "outline"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
@@ -208,6 +219,13 @@
         "valueType": "string",
         "name": "imageAlt",
         "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageTitle",
+        "label": "Title",
         "value": ""
       },
       {
