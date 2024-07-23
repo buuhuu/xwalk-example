@@ -22,29 +22,6 @@
             "name": "abstract",
             "label": "Absrtact",
             "description": "Enter an abstract for site search"
-          },
-          {
-            "component": "number",
-            "name": "number",
-            "label": "Number"
-          },
-          {
-            "component": "date-time",
-            "name": "datetime",
-            "label": "Date Time",
-            "required": true
-          },
-          {
-            "component": "date-time",
-            "valueType": "date",
-            "name": "date",
-            "label": "Date"
-          },
-          {
-            "component": "date-time",
-            "valueType": "time",
-            "name": "time",
-            "label": "Time"
           }
         ]
       }
